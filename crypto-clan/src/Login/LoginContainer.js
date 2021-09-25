@@ -12,7 +12,7 @@ class LoginContainer extends Component {
     }
   
     render() {
-        return <LoginPage />;
+        return <LoginPage history={this.props.history} />;
     }
 }
   
