@@ -13,7 +13,13 @@ export default function LoginPage(props) {
     const [privacyAgreed, setPrivacyAgreed] = useState('');
 
     const captureDetailsAndSignup = () => {
-        console.log('Firrst Name --> ' + firstName);
+        console.log('First Name --> ' + firstName);
+        console.log('Last Name --> ' + lastName);
+        console.log('Email --> ' + email);
+        console.log('Pwd --> ' + password);
+        console.log('Clan Id --> ' + clanId);
+        console.log('Clan Name --> ' + clanName);
+        console.log('Privacy --> ' + privacyAgreed);
         debugger;
     };
 
@@ -34,7 +40,7 @@ export default function LoginPage(props) {
                     </div>
                     <div className='col-7'  style={{ padding: '20px', backgroundColor: 'white', borderRadius: '10px' }}>
                         <div style={{  paddingLeft: '20px', paddingRight: '20px', }}>
-                            <span>New here ? <a onClick={() => { props.history.push('/signup'); }}>Sign up here!</a> </span>
+                            <span>Already have an account ? <a onClick={() => { props.history.push('/'); }}>Log in here!</a> </span>
                             <div>
                                 <div className='row' style={{ paddingTop: '16px' }}>
                                     <div className='col'>
@@ -108,7 +114,6 @@ export default function LoginPage(props) {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    {/* <input type="checkbox" name="terms"></input> */}
                                     <Form.Check 
                                         type={'checkbox'}
                                         id={'privacy'}

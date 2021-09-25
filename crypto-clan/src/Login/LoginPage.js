@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
-import { Button, Form, FormControl } from 'react-bootstrap';
-import { InputGroup } from 'react-bootstrap';
+import { Button, Form, FormControl, InputGroup } from 'react-bootstrap';
 
 export default function LoginPage(props) {
 
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [clanId, setClanId] = useState('');
-    const [clanName, setClanName] = useState('');
-    const [privacyAgreed, setPrivacyAgreed] = useState('');
 
-    const captureDetailsAndSignup = () => {
-        console.log('Firrst Name --> ' + firstName);
+    const captureDetailsAndLogin = () => {
+        console.log('Email --> ' + email);
+        console.log('Pwd --> ' + password);
         debugger;
     };
 
@@ -36,30 +31,6 @@ export default function LoginPage(props) {
                         <div style={{  paddingLeft: '20px', paddingRight: '20px', }}>
                             <span>New here ? <a onClick={() => { props.history.push('/signup'); }}>Sign up here!</a> </span>
                             <div>
-                                <div className='row' style={{ paddingTop: '16px' }}>
-                                    <div className='col'>
-                                        <Form.Label htmlFor="first-name">First name</Form.Label>
-                                        <InputGroup className="mb-3">
-                                            <FormControl
-                                                placeholder="John"
-                                                onChange={e => {setFirstName(e.target.value);}}
-                                                id="first-name"
-                                                style={{ backgroundColor: '#E8E8E8', color: 'white' }}
-                                            />
-                                        </InputGroup>
-                                    </div>
-                                    <div className='col'>
-                                        <Form.Label htmlFor="last-name">Last name</Form.Label>
-                                        <InputGroup className="mb-3">
-                                            <FormControl
-                                                placeholder="Doe"
-                                                onChange={e => {setLastName(e.target.value);}}
-                                                id="last-name"
-                                                style={{ backgroundColor: '#E8E8E8', color: 'white' }}
-                                            />
-                                        </InputGroup>
-                                    </div>
-                                </div>
                                 <Form.Label htmlFor="email">Email Address</Form.Label>
                                 <InputGroup className="mb-3">
                                     <FormControl
@@ -79,44 +50,9 @@ export default function LoginPage(props) {
                                     />
                                 </InputGroup>
                                 
-                                <div style={{ paddingTop: '16px' }}>
-                                    <div className='row grid grid-cols-2 divide-x'>
-                                        <div>
-                                            <div style={{ fontSize: '16px', fontWeight: '600', paddingBottom: '10px' }}>Join a Clan</div>
-                                            <Form.Label htmlFor="clan-id">Clan ID</Form.Label>
-                                            <InputGroup className="mb-3">
-                                                <FormControl
-                                                    placeholder="Joey Crypto Clan"
-                                                    onChange={e => {setClanId(e.target.value); }}
-                                                    id="clan-id"
-                                                    style={{ backgroundColor: '#E8E8E8', color: 'white' }}
-                                                />
-                                            </InputGroup>
-                                        </div>
-                                        <div>
-                                            <div style={{ fontSize: '16px', fontWeight: '600', paddingBottom: '10px' }}>Create a Clan</div>
-                                            <Form.Label htmlFor="clan-name">Clan Name</Form.Label>
-                                            <InputGroup className="mb-3">
-                                                <FormControl
-                                                    placeholder="Johns Crypto Clan"
-                                                    onChange={e => {setClanName(e.target.value); }}
-                                                    id="clan-name"
-                                                    style={{ backgroundColor: '#E8E8E8', color: 'white' }}
-                                                />
-                                            </InputGroup>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div className="row">
-                                    {/* <input type="checkbox" name="terms"></input> */}
-                                    <Form.Check 
-                                        type={'checkbox'}
-                                        id={'privacy'}
-                                        label={'Creating an account means you\'re okay with Terms of Service, Privacy Policy and our default Notification settings'}
-                                        onChange={e => { setPrivacyAgreed(e.target.value); }}
-                                    />
                                     <div style={{ paddingTop: '20px' }}>
-                                        <Button onClick={captureDetailsAndSignup}>Create Account</Button>
+                                        <Button onClick={captureDetailsAndLogin}>Sign In</Button>
                                     </div>
                                 </div>
                             </div>
