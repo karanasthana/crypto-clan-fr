@@ -10,6 +10,7 @@ import LoginContainer from './Login/LoginContainer';
 import DashboardPage from './Dashboard/DashboardPage';
 import ProfilePage from './Profile/ProfilePage';
 import ActivityPage from './Activity/ActivityPage';
+import SignupPage from './Signup/SignupPage';
 
 export default function App() {
     let isLoggedIn = true; // some logic
@@ -48,6 +49,9 @@ export default function App() {
                         </Route>
                         <Route path="/profile">
                             <ProfilePage />
+                        </Route>
+                        <Route exact  path="/signup">
+                            <SignupPage />
                         </Route>
                         <Route path="/" render={()=> <LoginContainer/>} />
                     </Switch>
