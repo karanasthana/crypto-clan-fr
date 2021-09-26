@@ -64,7 +64,7 @@ export default function LoginPage(props) {
                                                 placeholder="John"
                                                 onChange={e => {setFirstName(e.target.value);}}
                                                 id="first-name"
-                                                style={{ backgroundColor: '#E8E8E8', color: 'white' }}
+                                                style={{ backgroundColor: '#E8E8E8' }}
                                             />
                                         </InputGroup>
                                     </div>
@@ -75,7 +75,7 @@ export default function LoginPage(props) {
                                                 placeholder="Doe"
                                                 onChange={e => {setLastName(e.target.value);}}
                                                 id="last-name"
-                                                style={{ backgroundColor: '#E8E8E8', color: 'white' }}
+                                                style={{ backgroundColor: '#E8E8E8' }}
                                             />
                                         </InputGroup>
                                     </div>
@@ -86,7 +86,7 @@ export default function LoginPage(props) {
                                         placeholder="john@doe.com"
                                         onChange={e => {setEmail(e.target.value);}}
                                         id="email"
-                                        style={{ backgroundColor: '#E8E8E8', color: 'white' }}
+                                        style={{ backgroundColor: '#E8E8E8' }}
                                     />
                                 </InputGroup>
                                 <Form.Label htmlFor="pwd">Password</Form.Label>
@@ -95,7 +95,7 @@ export default function LoginPage(props) {
                                         placeholder="10+ characters"
                                         onChange={e => {setPassword(e.target.value);}}
                                         id="pwd"
-                                        style={{ backgroundColor: '#E8E8E8', color: 'white' }}
+                                        style={{ backgroundColor: '#E8E8E8' }}
                                     />
                                 </InputGroup>
                                 
@@ -109,7 +109,7 @@ export default function LoginPage(props) {
                                                     placeholder="Joey Crypto Clan"
                                                     onChange={e => {setClanId(e.target.value); }}
                                                     id="clan-id"
-                                                    style={{ backgroundColor: '#E8E8E8', color: 'white' }}
+                                                    style={{ backgroundColor: '#E8E8E8' }}
                                                 />
                                             </InputGroup>
                                         </div>
@@ -121,7 +121,7 @@ export default function LoginPage(props) {
                                                     placeholder="Johns Crypto Clan"
                                                     onChange={e => {setClanName(e.target.value); }}
                                                     id="clan-name"
-                                                    style={{ backgroundColor: '#E8E8E8', color: 'white' }}
+                                                    style={{ backgroundColor: '#E8E8E8' }}
                                                 />
                                             </InputGroup>
                                         </div>
