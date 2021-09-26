@@ -9,10 +9,13 @@ export default class DashboardPage extends Component {
         super(props);
     }
 
+    state = {};
+
     componentDidMount = () => {
         axios.get('http://e0dd-67-8-247-98.ngrok.io/api/v1/user/')
             .then(user => {
                 global.user = user;
+                this.setState({ user: user });
             })
             .catch(e => {
                 console.error(e);
