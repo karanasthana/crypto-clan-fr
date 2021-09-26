@@ -1,0 +1,12 @@
+.hover-sidebar:hover {
+    background-color: #BBB;
+    color: #222;
+}
+
+.sidebar-active a {
+    color: blue !important;
+}
+
+.sidebar-menu-item a {
+    color: #999;
+}
