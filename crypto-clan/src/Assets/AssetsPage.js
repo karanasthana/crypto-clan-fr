@@ -1,3 +1,4 @@
+import CryptoTileView from '../Components/CryptoTileView';
 import SidebarView from '../Sidebar/SidebarView';
 
 export default function AssetsPage() {
@@ -8,7 +9,16 @@ export default function AssetsPage() {
                     <SidebarView currentPage={'Assets'} />
                 </div>
                 <div className='col-md-9'>
-                    <h2>Assets</h2>
+                    <div>
+                        <div className="dashboard-crumb">
+                            Dashboard {'>'} Assets
+                        </div>
+                        <div style={{ display: 'flex' }}>
+                            <CryptoTileView />
+                            <CryptoTileView />
+                            <CryptoTileView />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
