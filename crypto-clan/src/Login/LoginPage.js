@@ -11,7 +11,18 @@ export default function LoginPage(props) {
         console.log('Email --> ' + email);
         console.log('Pwd --> ' + password);
 
-        props.history.replace('/home');
+        axios.post('http://e0dd-67-8-247-98.ngrok.io/api/v1/user/', {
+            email: `${email}`,
+            pwd: `${password}`
+        })
+            .then(userResponse => {
+                console.log(JSON.stringify(userResponse));
+                props.history.replace('/home');
+            })
+            .catch(e => {
+                console.error(e);
+                props.history.replace('/home');
+            });
     };
 
     return (

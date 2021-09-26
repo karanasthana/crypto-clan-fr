@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Button, Form, FormControl } from 'react-bootstrap';
 import { InputGroup } from 'react-bootstrap';
@@ -21,7 +22,19 @@ export default function LoginPage(props) {
         console.log('Clan Id --> ' + clanId);
         console.log('Clan Name --> ' + clanName);
         console.log('Privacy --> ' + privacyAgreed);
-        debugger;
+
+        axios.post('http://e0dd-67-8-247-98.ngrok.io/api/v1/user/', {
+            name: `${firstName} ${lastName}`,
+            email: `${email}`,
+            clanId: `${clanId}`
+        })
+            .then(userResponse => {
+                console.log(JSON.stringify(userResponse));
+                props.history.replace('/home');
+            })
+            .catch(e => {
+                console.error(e);
+            });
     };
 
     return (
