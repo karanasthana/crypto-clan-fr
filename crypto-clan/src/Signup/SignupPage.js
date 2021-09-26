@@ -28,7 +28,7 @@ export default function LoginPage(props) {
         <div className='container-fluid' style={{ minHeight: '100vh', backgroundColor: '#9381FF', padding: '20px', display: 'flex', alignItems: 'center' }}> 
             <div className='container' style={{ backgroundColor: '#F68CFE', borderRadius: '10px' }}>
                 <div className='row'>
-                    <div className='col-5' style={{ padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+                    <div className='col-md-5 col-sm-12' style={{ padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
                         <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
                             <h2><strong style={{ fontSize: '18px', fontFamily: 'fantasy' }}>CRYPTO CLAN</strong></h2>
                         </div>
@@ -39,7 +39,7 @@ export default function LoginPage(props) {
                             <img src={'https://i.pinimg.com/originals/6b/1b/22/6b1b22573f9f3d4bba11a9fa5cb45652.png'} width={'80%'} height={'auto'} />
                         </div>
                     </div>
-                    <div className='col-7'  style={{ padding: '20px', backgroundColor: 'white', borderRadius: '10px', display: 'flex' }}>
+                    <div className='col-md-7 col-sm-12'  style={{ padding: '20px', backgroundColor: 'white', borderRadius: '10px', display: 'flex' }}>
                         <div style={{  paddingLeft: '20px', paddingRight: '20px', }}>
                             <span style={{ justifyContent: 'flex-end' }}>Already have an account ? <Link to="/" style={{ color: '#178be7', cursor: 'pointer' }}>Log in</Link> here!</span>
                             <div>
