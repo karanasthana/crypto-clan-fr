@@ -7,8 +7,8 @@ export default function CryptoTileView(props) {
 
     return (
         <div style={{ margin: '25px' }}>
-            <div style={{ color: `${color1}`, marginBottom: '10px' }}>{props.cryptoName || 'Bitcoin'}</div>
-            <div style={{ height:'150px', width:'250px', background: `linear-gradient(${color1}, ${color2})`, borderRadius: '5%', color: 'white' }}>
+            <div style={{ color: `${color1}`, marginBottom: '10px', cursor: 'pointer' }}>{props.cryptoName || 'Bitcoin'}</div>
+            <div style={{ height:'150px', width:'250px', cursor: 'pointer', background: `linear-gradient(${color1}, ${color2})`, borderRadius: '5%', color: 'white' }}>
                 <div style={{ padding: '25px', display: 'flex', flexDirection: 'row' }}>
                     <div className="text-xl" style={{ fontSize: '50px', color: 'E4E4E4' }} >$</div>
                     <div className="text-xl" style={{ fontSize: '50px' }}>{props.value || '1820'}</div>
