@@ -9,6 +9,8 @@ import {
 import LoginContainer from './Login/LoginContainer';
 import DashboardPage from './Dashboard/DashboardPage';
 import ProfilePage from './Profile/ProfilePage';
+import AssetsPage from './Assets/AssetsPage';
+import LiveTradePage from './LiveTrade/LiveTradePage';
 import ActivityPage from './Activity/ActivityPage';
 import SignupPage from './Signup/SignupPage';
 
@@ -18,28 +20,14 @@ export default function App() {
         <>
             <Router>
                 <div>
-                    {/* <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/users">Users</Link>
-                            </li>
-                        </ul>
-                    </nav> */}
-
                     {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
                     <Switch>
                         <Route path="/assets">
-                            <About />
+                            <AssetsPage />
                         </Route>
                         <Route path="/live">
-                            <Users />
+                            <LiveTradePage />
                         </Route>
                         <Route path="/activity">
                             <ActivityPage />
@@ -59,16 +47,4 @@ export default function App() {
             </Router>
         </>
     );
-}
-
-function Home() {
-    return <h2>Home</h2>;
-}
-
-function About() {
-    return <h2>About</h2>;
-}
-
-function Users() {
-    return <h2>Users</h2>;
 }
