@@ -17,6 +17,9 @@ export default class DashboardPage extends Component {
             .catch(e => {
                 console.error(e);
             });
+
+        // Do an API call here to fetch all the assets
+        // Do an API call here to fetch all the recent values of cryptos
     };
 
     render = () => {
