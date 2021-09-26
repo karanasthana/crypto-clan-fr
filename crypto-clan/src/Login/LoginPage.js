@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormControl, InputGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function LoginPage(props) {
 
@@ -9,14 +10,15 @@ export default function LoginPage(props) {
     const captureDetailsAndLogin = () => {
         console.log('Email --> ' + email);
         console.log('Pwd --> ' + password);
-        debugger;
+
+        props.history.replace('/home');
     };
 
     return (
-        <div className='container-fluid' style={{ minHeight: '100vh', backgroundColor: '#9381FF', padding: '20px', display: 'flex', alignItems: 'center' }}> 
+        <div className='container-fluid' style={{ minHeight: '100vh', backgroundColor: '#9381FF', padding: '20px', display: 'flex', alignItems: 'center', paddingLeft: '20vw', paddingRight: '20vw' }}> 
             <div className='container' style={{ backgroundColor: '#F68CFE', borderRadius: '10px' }}>
                 <div className='row'>
-                    <div className='col-5' style={{ padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+                    <div className='col-6' style={{ padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
                         <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
                             <h2><strong style={{ fontSize: '18px', fontFamily: 'fantasy' }}>CRYPTO CLAN</strong></h2>
                         </div>
@@ -24,13 +26,13 @@ export default function LoginPage(props) {
                             <h2 style={{ fontSize: '30px' }}>Crypto Trading just became a team effort</h2>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img src={'https://i.pinimg.com/originals/6b/1b/22/6b1b22573f9f3d4bba11a9fa5cb45652.png'} width={'80%'} height={'auto'} />
+                            <img src={'https://i.pinimg.com/originals/6b/1b/22/6b1b22573f9f3d4bba11a9fa5cb45652.png'} width={'80%'} height={'auto'} style={{maxHeight: '50vh'}} />
                         </div>
                     </div>
-                    <div className='col-7'  style={{ padding: '20px', backgroundColor: 'white', borderRadius: '10px' }}>
+                    <div className='col-6'  style={{ padding: '20px', backgroundColor: 'white', borderRadius: '10px' }}>
                         <div style={{  paddingLeft: '20px', paddingRight: '20px', }}>
-                            <span>New here ? <a onClick={() => { props.history.push('/signup'); }}>Sign up here!</a> </span>
-                            <div>
+                            <span>New here ? <Link to="/signup" style={{ color: '#178be7', cursor: 'pointer' }}>Sign up</Link> here!</span>
+                            <div style={{ marginTop: '30px' }}>
                                 <Form.Label htmlFor="email">Email Address</Form.Label>
                                 <InputGroup className="mb-3">
                                     <FormControl
