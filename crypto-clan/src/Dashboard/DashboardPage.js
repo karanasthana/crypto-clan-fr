@@ -33,12 +33,11 @@ export default class DashboardPage extends Component {
                         <SidebarView currentPage={'Dashboard'} />
                     </div>
                     <div className='col-md-9'>
-                        <h2>Dashboard</h2>
-                        <div>
+                        <h2 style={{ marginBottom: '20px', marginTop: '20px' }}>Dashboard</h2>
+                        {/* <div>
                             <span>Story Views</span>
-                        </div>
+                        </div> */}
                         <div>
-                            <span>Tiles</span>
                             <CryptoTileView />
                         </div>
                     </div>
