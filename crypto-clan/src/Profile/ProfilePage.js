@@ -17,13 +17,13 @@ export default function ProfilePage() {
             <div className="right-info">
     
                 <div className="user-info">
-                    Name: inputName
-                    Email: inputEmail
-                    Joined: inputDate
-                    Clan Name: inputName
-                    Clan ID: inputID
-                    Member Total: inputTotal
-                    Assests Total: inputTotal
+                   <p> Name: inputName </p>
+                    <p>Email: inputEmail </p>
+                    <p>Joined: inputDate</p>
+                    <p>Clan Name: inputName</p>
+                    <p>Clan ID: inputID</p>
+                    <p>Member Total: inputTotal</p>
+                    <p>Assests Total: inputTotal</p>
                 </div>
     
             </div>
