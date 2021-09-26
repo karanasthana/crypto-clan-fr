@@ -1,23 +1,43 @@
+import axios from 'axios';
+import { Component } from 'react';
 import CryptoTileView from '../Components/CryptoTileView';
 import SidebarView from '../Sidebar/SidebarView';
 
-export default function DashboardPage() {
-    return (
-        <div style={{ width: '100vw' }}>
-            <div className='row'>
-                <div className='col-md-3'>
-                    <SidebarView currentPage={'Dashboard'} />
-                </div>
-                <div className='col-md-9'>
-                    <h2>Dashboard</h2>
-                    <div>
-                        <span>Story Views</span>
+export default class DashboardPage extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount = () => {
+        axios.get('http://e0dd-67-8-247-98.ngrok.io/api/v1/user/')
+            .then(user => {
+                global.user = user;
+            })
+            .catch(e => {
+                console.error(e);
+            });
+    };
+
+    render = () => {
+        return (
+            <div style={{ width: '100vw' }}>
+                <div className='row'>
+                    <div className='col-md-3'>
+                        <SidebarView currentPage={'Dashboard'} />
                     </div>
-                    <div>
-                        <span>Tiles</span>
-                        <CryptoTileView />
+                    <div className='col-md-9'>
+                        <h2>Dashboard</h2>
+                        <div>
+                            <span>Story Views</span>
+                        </div>
+                        <div>
+                            <span>Tiles</span>
+                            <CryptoTileView />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>);
+        );
+    }
 }
