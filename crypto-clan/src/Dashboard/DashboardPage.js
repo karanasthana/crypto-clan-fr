@@ -3,7 +3,7 @@ import SidebarView from '../Sidebar/SidebarView';
 
 export default function DashboardPage() {
     return (
-        <div style={{ width: '100vh' }}>
+        <div style={{ width: '100vw' }}>
             <div className='row'>
                 <div className='col-md-3'>
                     <SidebarView currentPage={'Dashboard'} />
