@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/crypto-clan-fr/static/css/main.ba0a2d3e.chunk.css",
-    "main.js": "/crypto-clan-fr/static/js/main.668857d8.chunk.js",
-    "main.js.map": "/crypto-clan-fr/static/js/main.668857d8.chunk.js.map",
+    "main.js": "/crypto-clan-fr/static/js/main.f70b45e2.chunk.js",
+    "main.js.map": "/crypto-clan-fr/static/js/main.f70b45e2.chunk.js.map",
     "runtime-main.js": "/crypto-clan-fr/static/js/runtime-main.02ea09a0.js",
     "runtime-main.js.map": "/crypto-clan-fr/static/js/runtime-main.02ea09a0.js.map",
     "static/js/2.aec42332.chunk.js": "/crypto-clan-fr/static/js/2.aec42332.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.02ea09a0.js",
     "static/js/2.aec42332.chunk.js",
     "static/css/main.ba0a2d3e.chunk.css",
-    "static/js/main.668857d8.chunk.js"
+    "static/js/main.f70b45e2.chunk.js"
   ]
 }
