@@ -1,5 +1,6 @@
 import {  } from 'bootstrap';
 import { Row, Col, Image, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import SidebarView from '../Sidebar/SidebarView';
 
 export default function ProfilePage(props) {
@@ -11,7 +12,7 @@ export default function ProfilePage(props) {
                 </div>
                 <div className='col-md-9'>
                     <div className="dashboard-crumb">
-                        Dashboard {'>'} Profile
+                        <Link to={'/home'}>Dashboard</Link> {'>'} <Link to={'/profile'}>Profile</Link>
                     </div>
     
                     <div style={{ fontSize: '40px', marginBottom: '50px' }}>
